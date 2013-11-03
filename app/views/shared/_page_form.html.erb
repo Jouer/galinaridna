@@ -1,0 +1,41 @@
+<%= form_for(@nouvon) do |f| %>
+  
+  <h3> ce est forme per nouvon </h3>
+   <% if @nouvon.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@nouvon.errors.count, "error") %> prohibited this page from being saved:</h2>
+
+      <ul>
+      <% @page.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="field">
+    <%= @nouvon.subject.name %><br>
+     <div><%= f.hidden_field :subject_id %></div>
+    
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :permalink %><br>
+    <%= f.text_field :permalink %>
+  </div>
+  <div class="field">
+    <%= f.label :position %><br>
+    <%= f.number_field :position %>
+  </div>
+  <div class="field">
+    <%= f.label :visible %><br>
+    <%= f.check_box :visible %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Creer" %>
+  </div>
+  <%= f.submit "Post", class: "btn btn-large btn-primary" %>
+<% end %>

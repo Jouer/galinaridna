@@ -1,0 +1,31 @@
+<h3><%= link_to 'Back to page', page_path(@page) %> |  <%= link_to 'Edit section', edit_page_section_path(@page, @section) %></h3>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Sections Name:</strong>
+  
+   <%=  @section.name %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @section.position %>
+</p>
+
+<p>
+  <strong>Visible:</strong>
+  <%= @section.visible %>
+</p>
+
+<p>
+  <strong>Content type:</strong>
+  <%= @section.content_type %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  
+  <%=  @section.content %>
+</p>
+
+

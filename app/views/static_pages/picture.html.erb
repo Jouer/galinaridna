@@ -1,0 +1,38 @@
+<div id="picture_show">
+
+<%= link_to("", {:action => 'show', :id => @section.page.permalink}, :class => "btn btn-default glyphicon glyphicon-backward") %>
+ <% img_name = @img_name  %>
+   <% next_img = @next_img  %>
+   <% prev_img = @prev_img  %>
+   
+<div class="container">
+<div class="row">
+  <div class="col-xs-12 col-md-12 center-block">
+  
+   <div class="row center-block">
+  <div class="col-md-1"><%= link_to('Prev', { :action => 'picture', :image_name => prev_img, :id => @section.id, :page_id => @section.page_id }, class: "glyphicon glyphicon-chevron-left") %>
+</div>
+  <div class="col-md-1 col-md-push-10"><%= link_to('Next', {class: "next", :action => 'picture', :image_name => next_img, :id => @section.id, :page_id => @section.page_id }, class: "glyphicon glyphicon-chevron-right") %></div>
+</div>
+
+
+
+
+<%= image_tag(@img_name, :alt => "", class: "shadow img-responsive")%>
+
+    
+
+  
+   
+  
+  
+    <p class='center'><%=@section.content %></p>
+
+   
+ </div>
+  
+</div>  
+<%= link_to("", {:action => 'show', :id => @section.page.permalink}, :class => "btn btn-default glyphicon glyphicon-backward") %>
+       
+ </div> 
+</div>  

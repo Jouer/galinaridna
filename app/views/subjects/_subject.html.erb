@@ -1,0 +1,16 @@
+<li>
+  <span class="name"><%= subject.name %></span>
+  
+</li><li>
+      <tr>
+        <td>attention!<%= link_to subject.name, subject %></td>
+        <td><%= subject.position %></td>
+        <td><%= subject.visible %></td>
+        <td class="center"><%= subject.pages.size %></td>
+    
+         attention!<%= link_to subject.name, subject %>
+        <td><%= link_to 'Show', subject %></td>
+        <td><%= link_to 'Edit', edit_subject_path(subject) %></td>
+        <td><%= link_to 'Destroy', subject, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+</li>

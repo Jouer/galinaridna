@@ -1,0 +1,37 @@
+<% if current_user.admin?  %>
+<h1>Listing sections</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Position</th>
+      <th>Visible</th>
+      <th>Content type</th>
+      <th>Content</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sections.each do |section| %>
+      <tr>
+        <td><%= section.name %></td>
+        <td><%= section.position %></td>
+        <td><%= section.visible %></td>
+        <td><%= section.content_type %></td>
+        <td><%= section.content %></td>
+        <td><%= link_to 'Show', page_section_path(@page, section) %></td>
+        <td><%= link_to 'Edit', edit_page_section_path(@page, section) %></td>
+        <td><%= link_to 'Destroy', [@page, section], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Section', new_page_section_path(@page) %>
+<% end %>

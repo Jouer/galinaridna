@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+<h3><%= link_to 'Back to subject list', subjects_path %></h3>
+<p>
+  <strong>Subjects Name:</strong>
+  <h1> <%= @subject.name %></h1>
+</p>
+
+ <% if @subject.pages.any? %>
+      <p>Subject involve the next pages (<%= @subject.pages.count %>)</p>
+      <%  @subject.pages.each do |page| %> 
+     <h2><%= page.name %><p><%= link_to 'Edit page name' , edit_subject_page_path(@subject, page)%> | <%= link_to 'Show page content' , subject_page_path(@subject, page)%></p></h2>
+     <% end %>
+     <% else %>
+     <p><%= 'There is no any pages' %></p>
+   
+     
+
+ <% end %>
+	
+ 
+<h3><%= link_to 'new page', new_subject_page_path(@subject) %> </h3>
+

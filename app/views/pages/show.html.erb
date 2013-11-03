@@ -1,0 +1,35 @@
+<h3><%= link_to 'Back to subject', subject_path(@subject) %> <td><%= link_to 'Destroy', [@subject, @page], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr></h3>
+
+<p id="notice"><%= notice %></p>
+
+<h1>
+  <strong>Page name:</strong>
+  <%= @page.name %>
+</h1>
+
+<p>
+  <strong>Permalink:</strong>
+  <%= @page.permalink %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @page.position %>
+</p>
+
+<p>
+  <strong>Visible:</strong>
+  <%= @page.visible %>
+</p>
+<% if @page.sections.any? %>
+      <p>Sections (<%= @page.sections.count %>)</p>
+      <%  @page.sections.each do |section| %> 
+     <h2><%= section.name %><p><%= link_to 'Show sections content' , page_section_path(@page, section)%></p></h2>
+     <% end %>
+     <% else %>
+     <p><%= 'There is no any section' %></p>
+	 <% end %>
+ 
+<h3><%= link_to 'new section', new_page_section_path(@page) %></h3>
+

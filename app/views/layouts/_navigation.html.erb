@@ -1,0 +1,5 @@
+<% if @feed_subjects.any? %>
+  <class="menu">
+    <%= render partial: 'shared/feed_subject', collection: @feed_subjects %>
+  <% end %>
+<p class="line"><%= image_tag("pict6.png", alt: "Imaginasion") %></p>

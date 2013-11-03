@@ -1,0 +1,45 @@
+<% provide(:title, @page.name) %>
+
+<div class="mode">
+<%= image_tag(@image, :height => '300', :alt => "", class: "shadow")%>
+<div id='head'><h1>Galina Ridna</h1>
+<p class="small">electronic collection of paintings</p></div>
+<div id="introduction"><p>Марина Цветаева - </br></p>
+<p>...Чтобы в мире было двое:</br>
+Я и мир!</br></p></div>
+		</div>
+
+<div class="container">
+
+<h3><%= @page.name %></h3>
+
+<% @page.sections.each do |section| %>
+ 
+    <% case section.content_type
+       when 'HTML' %>
+       <div class="description">
+          <%= simple_format(section.content) %>
+          </div>
+    <% when 'text' %>
+   
+    
+   <% if section.name != 'info'
+   a = []
+   a[0]= section.name
+   a[1] = '.png'
+   img_name = a.join('') %>
+<div class="box">
+
+    <li>  
+    <%= link_to( image_tag(img_name, height: '100', :alt => section.name, class: "shadow"), :action => 'picture', :id => section.id, :page_id => section.page_id, :image_name => img_name ) %></li>
+    <% end %>
+     
+  </div><!-- box --> 
+    <% end %>
+  
+    
+<% end %>
+ </div> 
+
+<div class="line"><%= image_tag("pict1.png", alt: "Imaginasion") %></div>
+
