@@ -1,75 +1,29 @@
 <% provide(:title, 'About Project') %>
-<div id="content_about">
-<div class="container">
-
 <div class="mode">
-<%= image_tag(@image, :height => '300', :alt => "", class: "shadow")%>
+<%= image_tag(@image, :height => '300', :alt => "", class: "shadow img-responsive")%>
+
 <div id='head'><h1>Galina Ridna</h1>
 <p class="small">electronic collection of paintings</p></div>
-<div id="introduction"><p>Марина Цветаева - </br></p>
-<p>...Чтобы в мире было двое:</br>
-Я и мир!</br></p></div>
-		</div>
+
+</div>
+<div class="container clear">
 <div id="content_page">
-<h1>C'est Moi</h1>
+
  <% if @page %>
 <% @page.sections.each do |section| %>
 <% case section.content_type
        when 'HTML' %>
        <div class="description">
-         
-         <%= raw(sanitize(section.content, :tags => ['strong', 'em', 'a'])) %>
-         
+          <%= simple_format(section.content) %>
           </div>
     <% when 'text' %>
  <%= section.content %>
   <% end %>
  <% end %>
  <% end %>
-<p>Fair moi un bon cafe - </br>j'ai une histoire a te raconte...
-</p><p>Сонет
-Я верно болен: на сердце туман,
-Мне скучно все, и люди, и рассказы,
-Мне снятся королевские алмазы
-И весь в крови широкий ятаган.
 
-Мне чудится (и это не обман),
-Мой предок был татарин косоглазый,
-Свирепый гунн… я веяньем заразы,
-Через века дошедшей, обуян.
-
-Молчу, томлюсь, и отступают стены —
-Вот океан весь в клочьях белой пены,
-Закатным солнцем залитый гранит,
-
-И город с голубыми куполами,
-С цветущими жасминными садами,
-Мы дрались там… Ах, да! я был убит.
-</p>
 <div class="line"><%= image_tag("pict1.png", alt: "Imaginasion") %></div>
 </div>
 </div><!-- content -->
 
 
-</div>
-
-=======
-
-<p>Марина Цветаева - </br>
-
-Я люблю такие игры,</br>
-Где надменны все и злы.</br>
-Чтоб врагами были тигры</br>
-И орлы!</br>
-Чтобы пел надменный голос:</br>
-"Гибель здесь, а там тюрьма!"</br>
-Чтобы ночь со мной боролась,</br>
-Ночь сама!</br>
-Я несусь,- за мною пасти,</br>
-Я смеюсь - в руках аркан...</br>
-Чтобы рвал меня на части</br>
-Ураган!</br>
-Чтобы все враги - герои!</br>
-Чтоб войной кончался пир!</br>
-Чтобы в мире было двое:</br>
-Я и мир!</p>

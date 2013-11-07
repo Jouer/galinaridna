@@ -1,6 +1,6 @@
 <% if signed_in? %>
   <div class="row">
-    <aside class="span4">
+    <aside class="col-md-4">
       <section>
         <%= render 'shared/user_info' %>
       </section>
@@ -12,19 +12,19 @@
         <%= render 'shared/micropost_form' %>
       </section>
     </aside>
-    <div class="span8">
-      <h3>Courrier diplomatique et Courrier du coeur</h3>
+    <div class="col-md-8">
+      <h3>votre courrier</h3>
       <%= render 'shared/feed' %>
     </div>
   </div>
 <% else %>
 <div class="center jumbotron">
-  <h1>Bienvenu de Ordinaire CMS</h1>
+  <h1> Site l'artiste Galina Ridna</h1>
 
   <h2>
-    C'est l'Ordinaire CMS Chanson
+    Bienvenu
   </h2>
-<h2><%= link_to image_tag("pict3.png", alt: ""), '#' %></h2>
+<h2><%= image_tag("pict5.png", alt: "") %></h2>
   <%= link_to "Sign up now!", signup_path , class: "btn btn-large btn-primary" %>
 </div>
 <% end %>

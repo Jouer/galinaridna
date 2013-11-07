@@ -1,38 +1,29 @@
-<div id="picture_show">
-
-<%= link_to("", {:action => 'show', :id => @section.page.permalink}, :class => "btn btn-default glyphicon glyphicon-backward") %>
+<% provide(:title, @section.content) %>
+ <div id="picture_show"> 
+<ul class="pager">
+   <li><%= link_to "Back", {:action => 'show', :id => @section.page.permalink}, class: "previous" %></li>
+   </ul>
  <% img_name = @img_name  %>
    <% next_img = @next_img  %>
    <% prev_img = @prev_img  %>
-   
-<div class="container">
-<div class="row">
-  <div class="col-xs-12 col-md-12 center-block">
-  
-   <div class="row center-block">
-  <div class="col-md-1"><%= link_to('Prev', { :action => 'picture', :image_name => prev_img, :id => @section.id, :page_id => @section.page_id }, class: "glyphicon glyphicon-chevron-left") %>
-</div>
-  <div class="col-md-1 col-md-push-10"><%= link_to('Next', {class: "next", :action => 'picture', :image_name => next_img, :id => @section.id, :page_id => @section.page_id }, class: "glyphicon glyphicon-chevron-right") %></div>
-</div>
-
-
-
-
-<%= image_tag(@img_name, :alt => "", class: "shadow img-responsive")%>
-
-    
+     
 
   
-   
-  
-  
+ 
+   <ul class="pager">
+   <li><%= link_to('Previous', { :action => 'picture', :image_name => prev_img, :id => @section.id, :page_id => @section.page_id }, class: "previous pull-left") %></li>
+  <li><%= link_to('Next', { :action => 'picture', :image_name => next_img, :id => @section.id, :page_id => @section.page_id }, class: "next pull-right") %></li>
+</ul>
+
+<%= link_to(image_tag(@img_name, :alt => "", class: "shadow img-responsive"), { :action => 'picture', :image_name => next_img, :id => @section.id, :page_id => @section.page_id }, class: "next pull-right") %>
+
+
     <p class='center'><%=@section.content %></p>
-
+<ul class="pager">
+   <li><%= link_to "Back", {:action => 'show', :id => @section.page.permalink}, class: "previous" %></li>
+   </ul>
    
  </div>
   
-</div>  
-<%= link_to("", {:action => 'show', :id => @section.page.permalink}, :class => "btn btn-default glyphicon glyphicon-backward") %>
-       
- </div> 
-</div>  
+
+        

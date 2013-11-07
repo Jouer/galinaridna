@@ -1,13 +1,15 @@
 <% provide(:title, 'Home') %>
-<div class="container">
 <div class="mode">
-<%= image_tag(@image, :height => '300', :alt => "", class: "shadow")%>
+<%= image_tag(@image, :alt => "", class: "shadow img-responsive")%>
+
 <div id='head'><h1>Galina Ridna</h1>
 <p class="small">electronic collection of paintings</p></div>
 <div id="introduction"><p>Марина Цветаева - </br></p>
 <p>...Чтобы в мире было двое:</br>
 Я и мир!</br></p></div>
-		</div>
+
+</div>
+		
 <div id="content_page">
 <div class="container">
 <% if @page %>
@@ -22,29 +24,8 @@
   <% end %>
  <% end %>
  <% end %>
-<p>Дикая воля
-Я люблю такие игры,
-Где надменны все и злы.
-Чтоб врагами были тигры
-И орлы!
-Чтобы пел надменный голос:
-"Гибель здесь, а там тюрьма!"
-Чтобы ночь со мной боролась,
-Ночь сама!
-Я несусь,- за мною пасти,
-Я смеюсь - в руках аркан...
-Чтобы рвал меня на части
-Ураган!
-Чтобы все враги - герои!
-Чтоб войной кончался пир!
-Чтобы в мире было двое:
-Я и мир!</p>
 <div class="line"><%= image_tag("pict1.png", alt: "Imaginasion") %></div>
 
-
-<h1>C'est Moi</h1>
-<p>Fair moi un bon cafe - </br>j'ai une histoire a te raconte...
-</p>
 </div>
 </div><!-- content -->
-</div>
+

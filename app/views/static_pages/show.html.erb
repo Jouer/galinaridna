@@ -1,17 +1,16 @@
 <% provide(:title, @page.name) %>
-
 <div class="mode">
-<%= image_tag(@image, :height => '300', :alt => "", class: "shadow")%>
+<%= image_tag(@image, :alt => "", class: "shadow img-responsive")%>
+
 <div id='head'><h1>Galina Ridna</h1>
 <p class="small">electronic collection of paintings</p></div>
-<div id="introduction"><p>Марина Цветаева - </br></p>
-<p>...Чтобы в мире было двое:</br>
-Я и мир!</br></p></div>
-		</div>
 
-<div class="container">
+</div>
 
-<h3><%= @page.name %></h3>
+
+
+<div class="show">
+<h5 class='center'><%= @page.name %></h5>
 
 <% @page.sections.each do |section| %>
  
@@ -39,7 +38,7 @@
   
     
 <% end %>
- </div> 
+ 
 
-<div class="line"><%= image_tag("pict1.png", alt: "Imaginasion") %></div>
-
+<div class="line clear"><%= image_tag("pict1.png", alt: "Imaginasion") %></div>
+ </div>

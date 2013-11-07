@@ -2,13 +2,13 @@
 <% if feed_subject.visible %>
 
 
-  <ul><span class="name"><p><%= feed_subject.name %></p></span></ul>
+  <ul><span class="name"><h4><%= feed_subject.name %></h4></span></ul>
  
  
   <%  feed_subject.pages.each do |page| %>
   <% if page.visible? %>
 
-  <ol><%= link_to_unless_current(page.name, :action => 'show', :id => page.permalink) %></ol>
+  <li><%= link_to_unless_current(page.name, :action => 'show', :id => page.permalink) %></li>
  <% end %>
   <% end %>
  		<% end %>
