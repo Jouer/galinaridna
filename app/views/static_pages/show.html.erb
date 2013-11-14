@@ -12,7 +12,7 @@
 <div class="show">
 <h5 class='center'><%= @page.name %></h5>
 
-<% @page.sections.each do |section| %>
+<% @page.sections.order(position: :asc).each do |section| %>
  
     <% case section.content_type
        when 'HTML' %>
@@ -30,7 +30,7 @@
 <div class="box">
 
     <li>  
-    <%= link_to( image_tag(img_name, height: '100', :alt => section.name, class: "shadow"), :action => 'picture', :id => section.id, :page_id => section.page_id, :image_name => img_name ) %></li>
+    <%= link_to( image_tag(img_name, :alt => section.content, class: "shadow"), :action => 'picture', :id => section.id, :page_id => section.page_id, :image_name => img_name ) %></li>
     <% end %>
      
   </div><!-- box --> 

@@ -15,7 +15,11 @@ class StaticPagesController < ApplicationController
   def show
   	@page = Page.where(:permalink => params[:id], :visible => true).first
   	render action: 'index' unless @page
-  	img_set = ['one.png', 'two.png', 'three.png', 'four.png', 'five.png', 'seven.png', 'eight.png']
+  	if (@page == Page.where(:permalink => 'black').first)
+  		img_set = ['col1.png', 'col2.png', 'col3.png']
+  		else
+  	   img_set = ['one.png', 'two.png', 'three.png', 'four.png', 'five.png',   'seven.png', 'eight.png', 'nine.png']
+  	    end
   	quantity = img_set.count
   	r = Random.new
   	r_number = r.rand(quantity)
@@ -58,6 +62,6 @@ class StaticPagesController < ApplicationController
  	
   
   def setup_navigation
- 		@feed_subjects = Subject.all
+ 		@feed_subjects = Subject.order(position: :asc)
  	end
 end

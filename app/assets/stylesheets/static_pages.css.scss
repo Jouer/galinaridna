@@ -144,17 +144,18 @@ p, td, ul, ol, li, dl, dt, dd { list-style-type: none;
 
 
 .description {width: 100%; padding: 10px;}
-.box{width:120px; height: 120px; float: left; padding:10px;
+.box{width:120px; height: 150px; float: left; padding:10px;
  li {  margin:auto;
-  img {padding: 5px;  border: 1px solid $blue;}
+  img {padding: 5px; max-height: 130px; max-width: 100px; border: 1px solid $blue;}
  	}	
 }
 
 #picture_show {
-background: asset-url('pict7.png')bottom no-repeat; padding-bottom: 50px;
+min-height: 500px;
+ padding-bottom: 50px;
 .btn {margin-bottom: 20px;background: none;}
 ul{padding:0; margin: 0;}
-img {padding: 2%; border: 1px solid $blue;
+a img {padding: 2%; border: 1px solid $blue;
 }
 }
 
