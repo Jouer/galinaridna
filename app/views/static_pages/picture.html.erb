@@ -3,19 +3,39 @@
 <ul class="pager">
    <li><%= link_to "Back", {:action => 'show', :id => @section.page.permalink}, class: "previous" %></li>
    </ul>
- <% img_name = @img_name  %>
-   <% next_img = @next_img  %>
-   <% prev_img = @prev_img  %>
-     
-
-  
+ <% a = []
+   a[0]= @img_name
+   a[1] = '.png' %>
+ 
+ <% img_name = a.join('') %>
+ 
+  <% img_set=[] %>
+ <% @set_img.each do |img| %>
+ <% img_set << img.name %>
+ <% end %>
+ <% img_set.find {|i| i==@img_name}
+	  n=img_set.index {|i| i==@img_name} 
+	 	if n < (img_set.count - 1)
+ 	 	@next_img=img_set[n+1]
+ 	 	else
+ 		@next_img=img_set[0]
+  		end 
+    if n > 0 
+   @prev_img=img_set[n-1]
+  	 else 
+  	@prev_img=img_set[-1] 
+ 	end	 %>
+   
+   
  
    <ul class="pager">
-   <li><%= link_to('Previous', { :action => 'picture', :image_name => prev_img, :id => @section.id, :page_id => @section.page_id }, class: "previous pull-left") %></li>
-  <li><%= link_to('Next', { :action => 'picture', :image_name => next_img, :id => @section.id, :page_id => @section.page_id }, class: "next pull-right") %></li>
+   
+   <li><%= link_to('Prev', { :action => 'picture', :image_name => @prev_img, :id => @section.id, :page_id => @section.page_id }, class: "prev pull-left") %></li>
+  <li><%= link_to('Next', { :action => 'picture', :image_name => @next_img, :id => @section.id, :page_id => @section.page_id }, class: "next pull-right") %></li>
+  
 </ul>
 
-<%= link_to(image_tag(@img_name, :alt => "", class: "shadow img-responsive"), { :action => 'picture', :image_name => next_img, :id => @section.id, :page_id => @section.page_id }, class: "next pull-right") %>
+<%= link_to(image_tag(img_name, :alt => "", class: "shadow img-responsive"), { :action => 'picture', :image_name => @next_img, :id => @section.id, :page_id => @section.page_id }, class: "next pull-right") %>
 
 
     <p class='center'><%=@section.content %></p>

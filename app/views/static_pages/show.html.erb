@@ -30,7 +30,7 @@
 <div class="box">
 
     <li>  
-    <%= link_to( image_tag(img_name, :alt => section.content, class: "shadow"), :action => 'picture', :id => section.id, :page_id => section.page_id, :image_name => img_name ) %></li>
+    <%= link_to( image_tag(img_name, :alt => section.content, class: "shadow"), :action => 'picture', :id => section.id, :page_id => section.page_id, :image_name => section.name ) %></li>
     <% end %>
      
   </div><!-- box --> 
