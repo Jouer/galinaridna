@@ -58,7 +58,7 @@ class SectionsController < ApplicationController
   def destroy
     @section.destroy
     respond_to do |format|
-      format.html { redirect_to page_sections_path(@page) }
+      format.html { redirect_to page_path(@page) }
       format.json { head :no_content }
     end
   end
