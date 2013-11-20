@@ -1,15 +1,15 @@
 <% provide(:title, @page.name) %>
-<div class="mode">
-<%= image_tag(@image, :alt => "", class: "shadow img-responsive")%>
 
+<div class="mode clear">
+ 
+<%= image_tag(@image, :alt => "", class: "shadow ")%>
+<div id="introduction"></div>
 <div id='head'><h1>Galina Ridna</h1>
-<p class="small">electronic collection of paintings</p></div>
-
-</div>
-
-
+ <p class="small">electronic collection of paintings</p></div>
+</div> <!--mode-->
 
 <div class="show">
+<div class="clear"></div>
 <h5 class='center'><%= @page.name %></h5>
 
 <% @page.sections.order(position: :asc).each do |section| %>
@@ -41,4 +41,5 @@
  
 
 <div class="line clear"><%= image_tag("pict1.png", alt: "Imaginasion") %></div>
- </div>
+
+</div>
