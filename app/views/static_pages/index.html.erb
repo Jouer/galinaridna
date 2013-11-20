@@ -1,24 +1,25 @@
 <% provide(:title, 'Home') %>
-<div class="mode">
-<%= image_tag(@image, :alt => "", class: "shadow img-responsive")%>
-
+<div class="mode clear">
+ 
+ 
+<%= image_tag(@image, :alt => "", class: "shadow ")%>
+<div id="introduction"><p>Марина Цветаева - </br></p><p>...Чтобы в мире было двое:</br>Я и мир!</br></p></div>
 <div id='head'><h1>Galina Ridna</h1>
-<p class="small">electronic collection of paintings</p></div>
-<div id="introduction"><p>Марина Цветаева - </br></p>
-<p>...Чтобы в мире было двое:</br>
-Я и мир!</br></p></div>
-
+ <p class="small">electronic collection of paintings</p>
 </div>
+
+
+</div><!--mode-->
 		
 <div id="content_page">
-<div class="container">
+<div class="container clear">
 <% if @page %>
 <% @page.sections.each do |section| %>
 <% case section.content_type
        when 'HTML' %>
        <div class="description">
           <%= simple_format(section.content) %>
-          </div>
+         </div>
     <% when 'text' %>
  <%= section.content %>
   <% end %>
@@ -27,5 +28,7 @@
 <div class="line"><%= image_tag("pict1.png", alt: "Imaginasion") %></div>
 
 </div>
+
+
 </div><!-- content -->
 

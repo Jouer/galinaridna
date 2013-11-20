@@ -1,4 +1,7 @@
 <% provide(:title, @section.content) %>
+<div class="row">
+<div class="container" >
+  
  <div id="picture_show"> 
 <ul class="pager">
    <li><%= link_to "Back", {:action => 'show', :id => @section.page.permalink}, class: "previous" %></li>
@@ -35,7 +38,7 @@
   
 </ul>
 
-<%= link_to(image_tag(img_name, :alt => "", class: "shadow img-responsive"), { :action => 'picture', :image_name => @next_img, :id => @section.id, :page_id => @section.page_id }, class: "next pull-right") %>
+<%= link_to(image_tag(img_name, class: "shadow img-responsive"), { :action => 'picture', :image_name => @next_img, :id => @section.id, :page_id => @section.page_id }, class: "img-responsive") %>
 
 
     <p class='center'><%=@section.content %></p>
@@ -44,6 +47,6 @@
    </ul>
    <div class="line clear"><%= image_tag("pict7.png", alt: "Imaginasion") %></div>
  </div>
-  
-
-        
+ </div> 
+</div>
+       

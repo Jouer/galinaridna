@@ -13,15 +13,16 @@
  
     <div id="main">
     <div class="row">
-    <div class="col-xs-12 col-md-3">
+   
+    <div class="col-md-3 hidden-xs hidden-sm">
 
   
       <div id="navigation">     
       <%= render 'layouts/navigation' %>
-      </div> </div><!-- .col-xs-6 col-md-4 -->
+      </div> </div><!--  col-md-3 -->
  
  
-<div class="col-xs-12 col-md-9">
+<div class="col-xs-12 col-sm-12 col-md-9">
     
       <% flash.each do |key, value| %>
          <%= content_tag(:div, value, class: "alert alert-#{key}") %>
@@ -34,6 +35,7 @@
   </div>    
       <div class="clear"></div>
     </div><!-- main -->
+   
     
   <%= render 'layouts/footer_st_pages' %> 
   <%= debug(params) if Rails.env.development? %> 
