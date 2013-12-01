@@ -9,6 +9,7 @@
 </div> <!--mode-->
 
 <div class="show">
+<div class="container">
 <div class="clear"></div>
 <h5 class='center'><%= @page.name %></h5>
 
@@ -30,7 +31,7 @@
 <div class="box">
 
     <li>  
-    <%= link_to( image_tag(img_name, :alt => section.content, class: "shadow"), :action => 'picture', :id => section.id, :page_id => section.page_id, :image_name => section.name ) %></li>
+    <%= link_to( image_tag(img_name, :alt => section.content, class: "shadow img-responsive"), :action => 'picture', :id => section.id, :page_id => section.page_id, :image_name => section.name ) %></li>
     <% end %>
      
   </div><!-- box --> 
@@ -41,5 +42,5 @@
  
 
 <div class="line clear"><%= image_tag("pict1.png", alt: "Imaginasion") %></div>
-
+</div>
 </div>
