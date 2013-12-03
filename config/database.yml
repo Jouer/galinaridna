@@ -21,8 +21,9 @@ test:
 production:
   adapter: postgresql
   encoding: utf8
-  database: joueur_ridna17
-  username: joueur_ridna17
-  password: p1ueAwAy
-  host: postgresql5.locum.ru
+  database: dcu35l854thsb3
+  username: mzkvozsnikrxkw
+  password: S09ztO2hkHwTnIrxngwCh3_oZ1
+  host: ec2-54-204-38-16.compute-1.amazonaws.com
+  port: 5432
   timeout: 5000
