@@ -176,24 +176,14 @@ img {padding: 2%; border: 1px solid $blue;}
 .footer_pages {
   border-top: 1px solid $grayMediumLight;
   color: $gr;
-  a {
-    
-    &:hover {
-    
+  a {  &:hover {
       background: none;
     }
   }
-  small {
-    float: left;
-  }
-  ul {
-  p { margin-top: 5px; padding:5px;}
-    float: right;
-    list-style: none;
-    li {
-      float: left;
-      margin-left: 10px;
-    }
+  ul {padding:5px;margin:0;
+  p {padding:15px;
+  background: asset-url('pict3.png')top no-repeat;
+    list-style: none;}
   }
 }			
 #footer { clear: both; text-align: center;
