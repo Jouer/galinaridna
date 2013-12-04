@@ -214,8 +214,10 @@ footer {
     li {
       float: left;
       margin-left: 10px;
+      p{padding:0; margin:0;
+      img{padding:0; margin:0;}
+      }
     }
-   li p{padding:0; margin:0;}
   }
 }
 
