@@ -215,6 +215,7 @@ footer {
       float: left;
       margin-left: 10px;
       p{padding:0; margin:0;
+      a{padding:0; margin:0;img{padding:0; margin:0;}}
       img{padding:0; margin:0;}
       }
     }
@@ -243,6 +244,6 @@ input {
 }
 
 .field_with_errors {
-  @extend .control-group;
+  
  
 }
