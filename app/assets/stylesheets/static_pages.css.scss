@@ -173,19 +173,7 @@ a { text-decoration: none;
 img {padding: 2%; border: 1px solid $blue;}
  }
 }
-.footer_pages {
-  border-top: 1px solid $grayMediumLight;
-  color: $gr;
-  a {  &:hover {
-      background: none;
-    }
-  }
-  ul {padding:5px;margin:0;
-  p {padding:15px;
-  background: asset-url('pict3.png')top no-repeat;
-    list-style: none;}
-  }
-}			
+		
 #footer { clear: both; text-align: center;
 background: asset-url('pict1.png')bottom no-repeat; padding-bottom: 50px;
  p { margin: 0; padding: 0.5em 1em; }
