@@ -127,11 +127,11 @@ float: left;
 
 
 .line{
- text-align:  center;margin:20px;margin-top: 100px;font-size:.8em;text-transform: uppercase;
+ text-align:  center;margin:20px;margin-top: 100px;
+ a{font-size:.8em;text-transform: uppercase;
   letter-spacing: -1px;
-  
-line-height: 1;  
-img{margin:5spx;}  
+  line-height: 1; } 
+img{margin:5px;}  
   
 }
 .original{
